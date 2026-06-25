@@ -5,7 +5,7 @@ Hello Pi! Is a smart home assistant that uses local hosted AI to process its wor
 * Raspberry Pi 4b
 * 1.8inch 128x160 RGB TFT LCD on SPI
 * INMP441 digital mic on i2s
-* PAM8403 two channel amp
+* PAM8403 two channel amp   (EDIT: Now is blown, current output generic 3.5mm jack headphones)
 * 4ohm stereo speakers
 * TTP223 capacitive button
 * Gemma 4 e4b q4_k_m 7.5B
