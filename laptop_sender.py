@@ -26,6 +26,7 @@ try:
         if mesaj.lower() == 'exit':
             break
         s.write((mesaj + '\n').encode('utf-8'))
+        s.flush()
 
 except KeyboardInterrupt:
     pass
