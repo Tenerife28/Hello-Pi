@@ -9,9 +9,11 @@ def asculta_mesaje(conn):
             if not data:
                 print("\n[Client deconectat]")
                 break
-            print(f"\n[Surface]: {data.decode('utf-8').strip()}")
+            # Parametrul errors='ignore' salveaza thread-ul de la crash
+            print(f"\n[Surface]: {data.decode('utf-8', errors='ignore').strip()}")
     except Exception as e:
-        sys.exit()
+        # Daca apare o eroare, vrem sa o vedem pe ecran, nu sa inchidem mut!
+        print(f"\n[Eroare thread citire]: {e}")
 
 s = socket.socket(socket.AF_BLUETOOTH, socket.SOCK_STREAM, socket.BTPROTO_RFCOMM)
 s.bind((socket.BDADDR_ANY, 1))
